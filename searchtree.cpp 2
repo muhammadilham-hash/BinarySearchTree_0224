@@ -5,7 +5,7 @@ using namespace std;
 class node
 {
 public:
-    string info; I
+    string info;
     node *leftchild;
     node *rightchild;
 
@@ -16,21 +16,23 @@ public:
         leftchild = l;
         rightchild = r;
     }
-}
+};
 
 class binarytree
 {
 public:
     node *root;
 
-  BinaryTree()
+    binarytree()
     {
-        ROOT = NULL; // Initializing ROOT to null
+        root = NULL;
     }
-
-    // Insert a node in the binary search tree
-    void insert(string element)
+   void insert(string element)
     {
-        NodenewNode = new Node(element, NULL, NULL);
+        node *newnode = new node(element, NULL, NULL);
+        
+        newnode->info = element;
+        newnode->leftchild = NULL;
+        newnode->rightchild = NULL;
 
-         
+        
